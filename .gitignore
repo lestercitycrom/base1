@@ -1,0 +1,9 @@
+/vendor
+.DS_Store
+.env
+.idea
+.vscode
+*.log
+/tmp
+/uploads
+/template

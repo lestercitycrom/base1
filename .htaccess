@@ -1,0 +1,17 @@
+Options +SymLinksIfOwnerMatch
+Options -Indexes
+DirectoryIndex index.php
+AddDefaultCharset UTF-8
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# Перенаправление всех запросов на API на api.php
+RewriteCond %{REQUEST_URI} ^/api/
+RewriteRule ^api/(.*)$ api/api.php [QSA,L]
+
+# Перенаправление всех остальных запросов на index.php для работы с маршрутизатором Vue.js в режиме history
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [QSA,L]
+</IfModule>

@@ -1,0 +1,15 @@
+# Установка LF в качестве стандартного окончания строки для всех текстовых файлов
+* text=auto
+
+# Исключение определенных типов файлов из автоматического преобразования окончания строк
+*.php text eol=lf
+*.js text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.json text eol=lf
+
+# Бинарные файлы
+*.png binary
+*.jpg binary
+*.gif binary
+*.pdf binary
